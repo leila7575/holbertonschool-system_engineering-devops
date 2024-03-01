@@ -1,0 +1,16 @@
+3.Scale up
+
+https://imgur.com/a/3mMJVuR
+
+This represents a scalable web infrastructure with HAProxy Load Balancer.
+
+1.Specifics about the infrastructure
+
+Load Balancer (HAproxy): It distributes incoming network traffic between multiple servers. Configuring HAproxy as a cluster allows fault tolerance and redundancy, improves scalability and performance avoiding SPOF, and enables seamless failover.
+
+load balancer is configured as a cluster, multiple load balancer instances are set up to work together in tandem, forming a high-availability (HA) cluster.
+In a clustered configuration, if one load balancer fails or becomes unavailable because of software problems, or network disruptions, the other load balancers in the cluster seamlessly take over its responsibilities. This ensures that the incoming traffic continues to be distributed evenly across the available servers, minimizing service disruptions and downtime.
+
+This way we can achieve redundancy, adds an extra layer of fault tolerance, maintain service availability and improve system reliability.
+
+Spliting components(web server, application server, database server into their own server: It allows to separates the functions of web server, application server and database server into distinct machines, dedicating each server to a specific task.This improves the performance. It also enables horizontal scalability, each component can be scaled to handle increasing loads. 
