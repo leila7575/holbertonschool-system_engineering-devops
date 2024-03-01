@@ -16,8 +16,10 @@ Monitoring Web Server QPS: QPS are Queries per Second, the monitoring tools can 
 
 2. Issues with the infrastructure
 
+SPOF: The load balancer is a SPOF, if it fails, it can result in the entire system failure, affecting the availability of the website.
+
 Terminating SSL at the load balancer level: Potential security risk because the incoming traffic is decrypted, it's transmitted in cleartext to backend servers. This lead to potential threats exposing sensitive data.
 
 Only one MySQL server capable of accepting writes: this causes a Single point of failure, because only one MySQL server is capable of accepting writes.
 
-Having servers with all the same components: It creates a SPOF, if a component fails on one server, it affects the entire infrastructure. 
+Having servers with all the same components: Using servers with identical components (database, web server, and application server) may pose a challenge due to variations in resource utilization among them. For example, the demand for database servers may differ from that of application servers.
