@@ -13,7 +13,7 @@ Distribution algorithm: The load balancer uses a round-robin distribution algori
 
 Active-Active setup: The load balancer is configured for an active-active set up, all servers are active and handle requests simultaneously. In an Active-Passive setup one server is active and handles all the traffic and the other one is passive and only takes over if the active server fails.
 
-Database Primary-Replica cluster: The primary nodes handles write operations, it also replicates data to the Replica nodes. Replica nodes handle read operations.
+Database Primary-Replica cluster: The primary nodes handles write operations, it also replicates data to the Replica nodes. Replica nodes handle read operations. In a MySQL Master-Replica cluster, replication is employed to ensure that data remains synchronized across multiple database servers.
 
 2. Issues with the infrastructure
 SPOF: The load balancer is a SPOF, if it fails, it can result in the entire system failure, affecting the availability of the website.
