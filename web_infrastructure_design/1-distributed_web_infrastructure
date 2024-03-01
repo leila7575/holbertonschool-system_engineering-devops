@@ -1,0 +1,23 @@
+1.Distributed web infrastructure
+
+https://imgur.com/a/fLuqop4
+
+The following diagram represents a three server web infrastructure.
+
+1.Specifics about the infrastructure.
+Servers: we use additionnal servers to avoid single point failure by adding redundancy and distribute the load. this way if one server fails, the system still remains functional. 
+
+Load-balancer: it distributes the traffic between the servers to avoid overload and increase the performance and scalability. Furthermore, it provides a single entry point for requests and also can check if servers are available for handling incoming traffic.
+
+Distribution algorithm: The load balancer uses a round-robin distribution algorithm. It distributes client requests to each server in turn.
+
+Active-Active setup: The load balancer is configured for an active-active set up, all servers are active and handle requests simultaneously. In an Active-Passive setup one server is active and handles all the traffic and the other one is passive and only takes over if the active server fails.
+
+Database Primary-Replica cluster: The primary nodes handles write operations, it also replicates data to the Replica nodes. Replica nodes handle read operations.
+
+2. Issues with the infrastructure
+SPOF: The load balancer is a SPOF, if it fails, it can result in the entire system failure, affecting the availability of the website.
+
+Security issues:There should be firewalls and HTTPS encrytion  to protect the system from attacks and unothaurized access to sensitive data.
+
+No monitoring: the system lacks monitoring , to avoid downtime, security issues, lack of detection of the system failure.
