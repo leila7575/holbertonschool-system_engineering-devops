@@ -1,0 +1,23 @@
+2. Secured and monitored web infrastructure
+
+https://imgur.com/a/0rQLrcl
+
+This represents a three server infrastructure with firewalls to provide security, HTTPS encryption and a monitoring tool(Data collector).
+
+1.Specifics about the infrastructure:
+
+Firewalls: They control and monitor, and filters incoming and outgoing network traffic in order to provide security, avoid unauthorized access, security threats and they ensure compliance with security policies.
+
+SSL certificate for HTTPS: HTTPS encryption allows encryption of the data between the user and the website, in order to enseru confidentiality.
+
+Monitoring: It optimizes the performance by tracking performance and availability of the infrastructure. It collects and analyzes data, sending data from each server to a centralized monitoring service.
+
+Monitoring Web Server QPS: QPS are Queries per Second, the monitoring tools can analyse the frequency of incoming HTTPS request, and use this data to improve performance.
+
+2. Issues with the infrastructure
+
+Terminating SSL at the load balancer level: Potential security risk because the incoming traffic is decrypted, it's transmitted in cleartext to backend servers. This lead to potential threats exposing sensitive data.
+
+Only one MySQL server capable of accepting writes: this causes a Single point of failure, because only one MySQL server is capable of accepting writes.
+
+Having servers with all the same components: It creates a SPOF, if a component fails on one server, it affects the entire infrastructure. 
