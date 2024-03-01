@@ -10,7 +10,7 @@ Firewalls: They control and monitor, and filters incoming and outgoing network t
 
 SSL certificate for HTTPS: HTTPS encryption allows encryption of the data between the user and the website, in order to enseru confidentiality.
 
-Monitoring: It optimizes the performance by tracking performance and availability of the infrastructure. It collects and analyzes data, sending data from each server to a centralized monitoring service.
+Monitoring: It optimizes the performance by tracking performance and availability of the infrastructure. It collects and analyzes data, sending data from each server to a centralized monitoring service. In a monitoring setup, the process typically involves a monitoring client, also known as an agent or collector, collecting data from various sources within the infrastructure and sending it to the monitoring system for analysis and visualization.  monitoring is configured  to collect web server data and trigger an alert if the Queries Per Second (QPS) metric exceeds a predefined threshold
 
 Monitoring Web Server QPS: QPS are Queries per Second, the monitoring tools can analyse the frequency of incoming HTTPS request, and use this data to improve performance.
 
